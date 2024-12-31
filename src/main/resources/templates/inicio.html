@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" th:href="@{/css/inicio.css}">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+<title th:text="${titulo1}"></title>
+</head>
+<body>
+
+ <header>
+        <img th:src="@{/images/computadora.png}" alt="Logo"/>
+        <div class="menu-toggle" onclick="Menudespliega()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/about">Sobre mí</a></li>
+                <li><a href="/portafolio">Portafolio</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contenedor">
+        <section>
+            <span>Hola! Soy</span>
+            <h1>Programadora</h1>
+            <hr>
+            <p>Soy una persona creativa, organizada y apasionada por el aprendizaje continuo.</p>
+            <p>Mi compromiso con el desarrollo personal y profesional me impulsa a planificar y ejecutar proyectos elaborados con excelencia y dedicación.</p>
+            <button><a href="#">Saber más</a></button>
+        </section>
+
+        <img th:src="@{/images/programadora.png}" alt="Imagen Principal"/>
+    </div>
+
+    <script>
+        function Menudespliega() {
+            const menu = document.querySelector('.menu');       
+            menu.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

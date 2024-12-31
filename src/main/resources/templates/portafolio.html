@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" th:href="@{/css/portafolio.css}">
+<link
+	href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
+	rel="stylesheet">
+<title th:text="${titulo3}"></title>
+</head>
+<body>
+
+   <header>
+        <img th:src="@{/images/computadora.png}" alt="Logo"/>
+        <div class="menu-toggle" onclick="Menudespliega()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/about">Sobre mí</a></li>
+                <li><a href="/portafolio">Portafolio</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="contenedor-total">
+        <section class="contenedor-nombre">
+            <h1>Soy Briyit</h1>
+            <h1>Melany Capcha</h1>
+            <h1>Martinez</h1>
+            <hr>
+            <img th:src="@{/images/fotografia2.jpg}" alt="Foto de Briyit" class="profile-picture"/>
+        </section>
+
+        <section class="contenedor-proyecto">
+            <div class="proyecto">
+                <img th:src="@{/images/vaquita-proyecto.jpg}" alt="Proyecto Vaquita" class="proyecto-img1"/>
+                <p>Proyecto de una página web para una distribuidora de leche con HTML, CSS y JavaScript</p>
+            </div>
+
+            <div class="proyecto">
+                <img th:src="@{/images/michelitros-react.jpg}" alt="Proyecto Michelitros" class="proyecto-img2"/>
+                <p>Proyecto de una página web unida a una base de datos en React para una licorería</p>
+            </div>
+
+            <div class="proyecto">
+                <img th:src="@{/images/proyecto-java.jpg}" alt="Proyecto Java" class="proyecto-img3"/>
+                <p>Proyecto de un sistema CRM incluido el CRUD en Java</p>
+            </div>
+
+            <div class="proyecto">
+                <img th:src="@{/images/proyecto-springboot.jpg}" alt="Proyecto Spring Boot" class="proyecto-img4"/>
+                <p>Proyecto para una mueblería en Spring Boot con CRUD en Java</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function Menudespliega() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+  
+</body>
+</html>

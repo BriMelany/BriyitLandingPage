@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" th:href="@{/css/about.css}">
+<link
+	href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
+	rel="stylesheet">
+<title th:text="${titulo2}"></title>
+</head>
+<body>
+
+    <header>
+        <img th:src="@{/images/computadora.png}" alt="Logo"/>
+        <div class="menu-toggle" onclick="Menudespliega()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/about">Sobre mí</a></li>
+                <li><a href="/portafolio">Portafolio</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contenedor-total">
+
+
+        <div class="contenedor-nombre">
+
+            <h1>Soy Briyit</h1>
+            <h1> Melany Capcha</h1>
+            <h1> Martinez</h1>
+    
+            <hr>
+    
+            <img th:src="@{/images/fotografia2.jpg}" alt="" />
+        </div>
+    
+    S
+        <div class="contenedor-descripcion">
+             
+            <div class="texto">    
+                <p>Soy estudiante de Cibertec, actualmente en el tercer ciclo de la carrera de Computación e Informática.</p>
+                <p>Poseo sólidos conocimientos en mi área de estudio y estoy comprometido con mi desarrollo académico y profesional</p>
+            </div>
+    
+            <div class="lenguajes-titulo-contenedor">
+    
+                <p>Lenguajes y Tecnologías:</p>
+    
+                <div class="lenguajes-contenedor">
+    
+                    <div class="lenguajes">
+                        <img th:src="@{/images/html.png}" alt=""/>
+                        <p>HTML</p>
+                    </div>
+        
+                    <div class="lenguajes">
+                        <img th:src="@{/images/css.png}" alt=""/>
+                        <p>CSS</p>
+                    </div>
+        
+                    <div class="lenguajes">
+                        <img th:src="@{/images/javascript.png}"alt=""/>
+                        <p>JAVASCRIPT</p>
+                    </div>
+        
+                    <div class="lenguajes">
+                        <img th:src="@{/images/react.png}" alt=""/>
+                        <p>REACT</p>
+                    </div>
+        
+                    <div class="lenguajes">
+                        <img th:src="@{/images/java.png}" alt=""/>
+                        <p>JAVA</p>
+                    </div>
+        
+                    <div class="lenguajes">
+                        <img th:src="@{/images/sql.png}" alt=""/>
+                        <p>SQL server</p>
+                    </div>
+        
+                </div>
+    
+    
+            </div>
+                     
+        </div>
+
+
+    </div>
+
+    
+
+    <script>
+        function Menudespliega() {
+            const menu = document.querySelector('.menu');       
+            menu.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
